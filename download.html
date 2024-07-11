@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Mod Download</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .botao {
+            width: 125px;
+            height: 45px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 1px 1px rgba(107, 221, 215, 0.37);
+            padding: 5px 10px;
+            background: rgb(47, 93, 197);
+            background: linear-gradient(160deg, rgba(47, 93, 197, 1) 0%, rgba(46, 86, 194, 1) 5%, rgba(47, 93, 197, 1) 11%, rgba(59, 190, 230, 1) 57%, rgba(0, 212, 255, 1) 71%);
+            color: #fff;
+            font-family: Roboto, sans-serif;
+            font-weight: 505;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
+            transition: .5s linear;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .botao::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            border-radius: 50%;
+            border: 3.5px solid transparent;
+            border-top-color: #fff;
+            animation: animateC 2s linear infinite;
+            transition: width 0.5s, height 0.5s;
+            box-sizing: border-box;
+        }
+
+        @keyframes animateC {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-600 to-black text-white dark:bg-zinc-800">
+    <nav class="absolute top-0 right-0 p-6">
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:text-zinc-300 dark:hover:text-zinc-500">Home</a></li>
+            <li><a href="about.html" class="hover:text-zinc-300 dark:hover:text-zinc-500">About</a></li>
+            <li><a href="features.html" class="hover:text-zinc-300 dark:hover:text-zinc-500">Features</a></li>
+            <li><a href="contact.html" class="hover:text-zinc-300 dark:hover:text-zinc-500">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="flex flex-col items-center">
+        <img src="https://i.imghippo.com/files/KGOH51720663305.png" alt="Logo" class="mb-8 rounded-full shadow-lg" />
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-center">Celestial Mod Download</h1>
+        <p class="text-lg md:text-xl mb-8 text-center">
+            Click the download button below to get the latest version.
+        </p>
+        <a href="https://github.com/Astralopgt/CelestialMenuDownload/raw/main/Celestial.dll" download class="botao" aria-label="Download">Download Now</a>
+    </div>
+</body>
+</html>
+
