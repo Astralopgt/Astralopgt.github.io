@@ -154,7 +154,7 @@
 <body>
 
     <div class="hidden" id="click-to-enter">
-        Click to Enter
+        enter
     </div>
 
     <div class="container" id="profile-container">
@@ -181,7 +181,6 @@
         const audio = document.getElementById('background-audio');
         let isMuted = false;
 
-        // Function to toggle mute
         function toggleMute() {
             const muteIcon = document.getElementById('mute-icon');
             if (isMuted) {
@@ -196,18 +195,16 @@
             }
         }
 
-        // Function to play music
         function playMusic() {
             audio.play().catch(error => {
                 console.log("Error playing audio:", error);
             });
         }
 
-        // Function to reveal the content when clicked
         document.getElementById('click-to-enter').addEventListener('click', function() {
-            document.getElementById('click-to-enter').style.display = 'none'; // Hide the "Click to Enter" text
-            document.getElementById('profile-container').style.opacity = 1; // Show the content
-            playMusic(); // Start the background music
+            document.getElementById('click-to-enter').style.display = 'none';
+            document.getElementById('profile-container').style.opacity = 1;
+            playMusic();
         });
     </script>
 
