@@ -28,12 +28,13 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
+            display: none;
         }
 
         .container {
             position: relative;
             z-index: 2;
-            background: rgba(20, 20, 30, 0.9);
+            background: rgba(20, 20, 30, 0.4);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -156,7 +157,7 @@
 </head>
 <body>
 
-    <video class="background-video" autoplay loop muted>
+    <video class="background-video" id="background-video" loop muted>
         <source src="background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -187,6 +188,7 @@
 
     <script>
         const audio = document.getElementById('background-audio');
+        const video = document.getElementById('background-video');
         let isMuted = false;
 
         function toggleMute() {
@@ -212,6 +214,8 @@
         document.getElementById('click-to-enter').addEventListener('click', function() {
             document.getElementById('click-to-enter').style.display = 'none';
             document.getElementById('profile-container').style.opacity = 1;
+            video.style.display = 'block';
+            video.play();
             playMusic();
         });
     </script>
