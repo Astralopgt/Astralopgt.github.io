@@ -12,8 +12,6 @@
             font-family: 'Roboto', sans-serif;
             color: #ffffff;
             overflow: hidden;
-            background: linear-gradient(145deg, #000000, #001eff);
-            animation: backgroundAnimation 10s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,9 +20,14 @@
             position: relative;
         }
 
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .container {
@@ -152,6 +155,11 @@
     </style>
 </head>
 <body>
+
+    <video class="background-video" autoplay loop muted>
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <div class="hidden" id="click-to-enter">
         enter
