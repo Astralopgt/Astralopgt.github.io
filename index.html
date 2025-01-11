@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emperor</title>
+    <link rel="icon" type="image/x-icon" href="Assets/images/LogoRounded.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="Assets/js/title.js"></script>
+    <link href="Assets/css/styles.css" rel="stylesheet">
+    <link href="Assets/css/particles.css" media="screen" rel="stylesheet">
+    <link href="Assets/css/Nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://univevip.github.io/cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <style>
+        body {
+            cursor: url('Assets/images/custom-cursor.cur'), auto;
+        }
+
+        a, button, input, textarea {
+            cursor: url('Assets/images/custom-cursor.cur'), auto;
+        }
+		
+		/* background-color: #181a1b; */
+        .achivnoti {
+            position: fixed;
+            top: 100px;
+            left: 10px;
+            background-color: #000;
+            color: #00FFFF;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 255, 255, 0.5);
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .remnoti {
+            background: none;
+            border: none;
+            color: #00FFFF;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Emperor</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="https://discord.gg/XnU8vBzAvK" class="active">Discord</a>
+            <a href="skids.html" class="active">Skids</a>
+        </nav>
+    </header>
+
+    <div class="center">
+        <h1>Emperor</h1>
+        <p1><span class="auto-type"></span></p1>
+    </div>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<audio id="welcome-sound" src="Assets/sounds/welcome.mp3" preload="auto" loop></audio>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div id="particles-js"></div>
+    <script src="Assets/js/particles.js"></script>
+    <script src="Assets/js/app.js"></script>
+
+    <script>
+        var audio = document.getElementById('welcome-sound');
+        audio.volume = 0.2;
+
+        var typed = new Typed(".auto-type", {
+            strings: ["Forever undetected.", "#1 cheat provider", "emperor > all."],
+            typeSpeed: 85,
+            backSpeed: 85,
+            backDelay: 700,
+            smartBackspace: true,
+            loop: true,
+        });
+
+        function toggleAudio(event) {
+            if (event.target.tagName === 'BUTTON' || event.target.tagName === 'A') {
+                return;
+            }
+            if (audio.paused) {
+                audio.play().catch(function(error) {
+                    console.log('🤓🤓🤓', error);
+                });
+            } else {
+                audio.pause();
+            }
+        }
+
+	document.addEventListener('click', toggleAudio);
+
+																																																																																																																																																																																																																																																																																																																																							document.addEventListener('contextmenu', function(event) {
+																																																																																																																																																																																																																																																																																																																																								event.preventDefault();
+																																																																																																																																																																																																																																																																																																																																								window.open('https://discord.gg/XnU8vBzAvK', '_blank');
+																																																																																																																																																																																																																																																																																																																																							});
+
+																																																																																																																																																																																																																																																																																																																																							document.addEventListener('keydown', function(event) {
+																																																																																																																																																																																																																																																																																																																																								if (event.ctrlKey && event.key === 's') {
+																																																																																																																																																																																																																																																																																																																																									event.preventDefault();
+																																																																																																																																																																																																																																																																																																																																									window.open('https://discord.gg/XnU8vBzAvK', '_blank');
+																																																																																																																																																																																																																																																																																																																																								}
+																																																																																																																																																																																																																																																																																																																																								if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+																																																																																																																																																																																																																																																																																																																																									event.preventDefault();
+																																																																																																																																																																																																																																																																																																																																									window.open('https://discord.gg/XnU8vBzAvK', '_blank');
+																																																																																																																																																																																																																																																																																																																																								}
+																																																																																																																																																																																																																																																																																																																																								if (event.key === 'F12') {
+																																																																																																																																																																																																																																																																																																																																									event.preventDefault();
+																																																																																																																																																																																																																																																																																																																																									window.open('https://discord.gg/XnU8vBzAvK', '_blank');
+																																																																																																																																																																																																																																																																																																																																								}
+	});
+</script>
+	
+	
+
+    <div id="achivnoti" class="achivnoti">
+        <p>Congrats, You have reached the #1 Cheat Provider</p>
+        <button id="remnoti" class="remnoti">&times;</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var closeBtn = document.getElementById('remnoti');
+            var notification = document.getElementById('achivnoti');
+
+            function showNoti() {
+                setTimeout(function() {
+                    notification.style.opacity = '1';
+                }, 2000);
+            }
+
+            showNoti();
+
+            closeBtn.addEventListener('click', function() {
+                notification.style.opacity = '0';
+            });
+        });
+    </script>
+</body>
+</html>
